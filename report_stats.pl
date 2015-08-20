@@ -1,5 +1,8 @@
 #!/usr/bin/perl -w
 
+# avoid zombie apocalypse
+$SIG{CHLD} = 'IGNORE';
+
 my $host = 'graphite';
 my $port = 2003;
 my $report_interval = 10;
